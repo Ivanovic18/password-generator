@@ -51,6 +51,12 @@ button {
     border-radius: 10px;
     line-height: 20px;
     border: none;
+    transition: border 0.35s, background-color 0.35s;
+}
+
+button:hover {
+    outline: 3px solid #10b981;
+    background-color: transparent;
 }
 
 form {
@@ -73,10 +79,11 @@ form {
     content: "";
     position: absolute;
     z-index: 1;
-    width: 1rem;
-    height: 1rem;
+    width: 1.3rem;
+    height: 1.3rem;
     background: transparent;
     border: 2px solid #2f3e53;
+    transform: translateY(-0.2rem);
 }
 .checkbox-spin + label span:after {
     z-index: 0;
@@ -91,6 +98,7 @@ form {
 
 label {
     color: #eee;
+    font-size: 20px;
 }
 
 hr {
@@ -111,7 +119,7 @@ hr {
     width: 30rem;
     border-radius: 10px;
     line-height: 50px;
-    color: white;
+    color: #55f991;
     font-size: 24px;
 }
 
