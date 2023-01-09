@@ -133,7 +133,7 @@ hr {
 @media (max-width: 576px) {
     button {
         font-size: 20px;
-        padding: 20px 16px;
+        padding: 16px 12px;
         width: 80%;
     }
 
@@ -150,5 +150,9 @@ hr {
     hr {
         margin-top: 30px;
         margin-bottom: 30px;
+    }
+
+    .password {
+        height: 52px;
     }
 }
