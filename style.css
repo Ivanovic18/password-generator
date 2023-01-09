@@ -133,7 +133,7 @@ hr {
 @media (max-width: 576px) {
     button {
         font-size: 20px;
-        padding: 10px 8px;
+        padding: 20px 16px;
         width: 80%;
     }
 
