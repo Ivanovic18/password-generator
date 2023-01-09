@@ -72,6 +72,7 @@ form {
     width: 25px;
     height: 19px;
     margin: 0 5px -4px 0;
+    transform: translateY(-0.2rem);
 }
 .checkbox-spin + label span:before,
 .checkbox-spin + label span::after {
@@ -83,7 +84,6 @@ form {
     height: 1.3rem;
     background: transparent;
     border: 2px solid #2f3e53;
-    transform: translateY(-0.2rem);
 }
 .checkbox-spin + label span:after {
     z-index: 0;
@@ -93,7 +93,7 @@ form {
 .checkbox-spin:checked + label span:before {
     transform: rotateZ(180deg);
     background: #10b981;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 label {
