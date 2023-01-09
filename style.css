@@ -81,7 +81,6 @@ hr {
     }
 
     .container {
-        margin-top: -200px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -93,28 +92,26 @@ hr {
     }
 
     .heading {
-        font-size: 100px;
+        font-size: 32px;
     }
 
     p {
-        font-size: 60px;
-        margin-top: 80px;
-        margin-bottom: 80px;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 40px;
     }
 
     button {
-        font-size: 50px;
-        padding: 50px 80px;
+        font-size: 18px;
+        padding: 10px 20px;
         width: 80%;
-        line-height: 70px;
         margin-left: auto;
         margin-right: auto;
-        border-radius: 30px;
     }
 
     hr {
-        margin-top: 80px;
-        margin-bottom: 80px;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     .passwords {
@@ -123,14 +120,13 @@ hr {
 
     .password {
         width: 80%;
-        height: 170px;
-        border-radius: 30px;
+        height: 40px;
         margin: auto;
     }
 
     #first-password {
         margin: auto;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
 }
 
