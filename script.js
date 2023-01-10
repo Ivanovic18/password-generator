@@ -17,10 +17,10 @@ $("button").click(function () {
     password1 = generatePassword(array);
     password2 = generatePassword(array);
     $("#first-password").text(password1);
-    $("#first-password").append("<img src='images/copy.png' />");
+    $("#first-password").append("<img id='image1' src='images/copy-1.png' />");
     $("#second-password").text(password2);
-    $("#second-password").append("<img src='images/copy.png' />");
-    $(".password").addClass("tooltip");
+    $("#second-password").append("<img id='image2' src='images/copy-1.png' />");
+    $(".password").css("color", "#fff");
 });
 
 function check(includeNumbers, includeSymbols) {
@@ -50,6 +50,24 @@ let text = "";
 $(".password").click(function () {
     text = $(this).text();
     navigator.clipboard.writeText(text);
+    $(this).animate(
+        {
+            color: "#55f991",
+        },
+        300
+    );
+    console.log($(this).attr("id"));
+    if ($(this).attr("id") === "first-password") {
+        $("#image1").fadeOut(100, function () {
+            $("#image1").attr("src", "images/copy.png");
+            $("#image1").fadeIn(100);
+        });
+    } else {
+        $("#image2").fadeOut(100, function () {
+            $("#image2").attr("src", "images/copy.png");
+            $("#image2").fadeIn(100);
+        });
+    }
 });
 
 $(".tooltip").tooltipster({
