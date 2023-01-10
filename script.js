@@ -152,7 +152,7 @@ function setDark() {
     );
     $("hr").animate(
         {
-            border: "1px solid #2f3e53",
+            borderColor: "#2f3e53",
         },
         300
     );
