@@ -49,5 +49,14 @@ let text = "";
 $(".password").click(function () {
     text = $(this).text();
     navigator.clipboard.writeText(text);
-    $("#tooltip").text("Copied!");
+});
+
+new jBox("Tooltip", {
+    attach: ".tooltip",
+    trigger: "click",
+});
+
+new jBox("Tooltip", {
+    attach: "img",
+    trigger: "click",
 });
