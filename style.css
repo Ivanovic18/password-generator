@@ -222,4 +222,8 @@ img {
         width: 80%;
         line-height: 8px;
     }
+
+    img {
+        bottom: 11px;
+    }
 }

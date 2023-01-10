@@ -55,8 +55,3 @@ new jBox("Tooltip", {
     attach: ".tooltip",
     trigger: "click",
 });
-
-new jBox("Tooltip", {
-    attach: "img",
-    trigger: "click",
-});
