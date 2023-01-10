@@ -1,3 +1,12 @@
+let currentTheme = localStorage.getItem("theme");
+console.log(currentTheme);
+
+if (currentTheme === "light") {
+    setLight();
+} else {
+    setDark();
+}
+
 const allCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[", "}", "]", ",", "|", ":", ";", "<", ">", ".", "?", "/"];
 
 const includingNumbers = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -76,71 +85,85 @@ $(".tooltip").tooltipster({
 });
 
 $(".theme").click(function () {
-    if ($(this).attr("src") === "images/light.png") {
-        $(".container").animate(
-            {
-                backgroundColor: "#ECFDF5",
-            },
-            300
-        );
-        $("#heading1").animate(
-            {
-                color: "#2B283A",
-            },
-            300
-        );
-        $("hr").animate(
-            {
-                borderColor: "#D5D4D8",
-            },
-            300
-        );
-        $("label").animate(
-            {
-                color: "#6b7280",
-            },
-            300
-        );
-        $(".theme").fadeOut(100, function () {
-            $(".theme").attr("src", "images/dark.png");
-            $(".theme").fadeIn(100);
-        });
-        $("button").hover(
-            function () {
-                $(this).css("background-color", "#1f2937");
-            },
-            function () {
-                $(this).css("background-color", "#10b981");
-            }
-        );
-    } else {
-        $(".container").animate(
-            {
-                backgroundColor: "#1f2937",
-            },
-            300
-        );
-        $("#heading1").animate(
-            {
-                color: "#fff",
-            },
-            300
-        );
-        $("hr").animate(
-            {
-                border: "1px solid #2f3e53",
-            },
-            300
-        );
-        $("label").animate(
-            {
-                color: "#eee",
-            },
-            300
-        );
-        $(".theme").fadeOut(100, function () {
-            $(".theme").attr("src", "images/light.png");
-            $(".theme").fadeIn(100);
-        });
+    if (currentTheme === "dark") {
+        setLight();
+    } else if (currentTheme === "light") {
+        setDark();
     }
 });
+
+function setLight() {
+    localStorage.setItem("theme", "light");
+    currentTheme = localStorage.getItem("theme");
+    console.log(currentTheme);
+    $(".container").animate(
+        {
+            backgroundColor: "#ECFDF5",
+        },
+        300
+    );
+    $("#heading1").animate(
+        {
+            color: "#2B283A",
+        },
+        300
+    );
+    $("hr").animate(
+        {
+            borderColor: "#D5D4D8",
+        },
+        300
+    );
+    $("label").animate(
+        {
+            color: "#6b7280",
+        },
+        300
+    );
+    $(".theme").fadeOut(100, function () {
+        $(".theme").attr("src", "images/dark.png");
+        $(".theme").fadeIn(100);
+    });
+    $("button").hover(
+        function () {
+            $(this).css("background-color", "#1f2937");
+        },
+        function () {
+            $(this).css("background-color", "#10b981");
+        }
+    );
+}
+
+function setDark() {
+    localStorage.setItem("theme", "dark");
+    currentTheme = localStorage.getItem("theme");
+    console.log(currentTheme);
+    $(".container").animate(
+        {
+            backgroundColor: "#1f2937",
+        },
+        300
+    );
+    $("#heading1").animate(
+        {
+            color: "#fff",
+        },
+        300
+    );
+    $("hr").animate(
+        {
+            border: "1px solid #2f3e53",
+        },
+        300
+    );
+    $("label").animate(
+        {
+            color: "#eee",
+        },
+        300
+    );
+    $(".theme").fadeOut(100, function () {
+        $(".theme").attr("src", "images/light.png");
+        $(".theme").fadeIn(100);
+    });
+}
