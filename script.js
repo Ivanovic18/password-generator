@@ -54,5 +54,5 @@ $(".password").click(function () {
 
 $(".tooltip").tooltipster({
     trigger: "click",
-    timer: 1000,
+    timer: 600,
 });
