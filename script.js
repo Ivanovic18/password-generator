@@ -20,6 +20,7 @@ $("button").click(function () {
     $("#first-password").append("<img src='images/copy.png' />");
     $("#second-password").text(password2);
     $("#second-password").append("<img src='images/copy.png' />");
+    $(".password").addClass("tooltip");
 });
 
 function check(includeNumbers, includeSymbols) {
@@ -51,7 +52,8 @@ $(".password").click(function () {
     navigator.clipboard.writeText(text);
 });
 
-new jBox("Tooltip", {
-    attach: ".tooltip",
+$(".tooltip").tooltipster({
+    theme: "my-custom-theme",
     trigger: "click",
+    timer: 1000,
 });
