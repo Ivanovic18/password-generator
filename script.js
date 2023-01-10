@@ -74,3 +74,73 @@ $(".tooltip").tooltipster({
     trigger: "click",
     timer: 600,
 });
+
+$(".theme").click(function () {
+    if ($(this).attr("src") === "images/light.png") {
+        $(".container").animate(
+            {
+                backgroundColor: "#ECFDF5",
+            },
+            300
+        );
+        $("#heading1").animate(
+            {
+                color: "#2B283A",
+            },
+            300
+        );
+        $("hr").animate(
+            {
+                borderColor: "#D5D4D8",
+            },
+            300
+        );
+        $("label").animate(
+            {
+                color: "#6b7280",
+            },
+            300
+        );
+        $(".theme").fadeOut(100, function () {
+            $(".theme").attr("src", "images/dark.png");
+            $(".theme").fadeIn(100);
+        });
+        $("button").hover(
+            function () {
+                $(this).css("background-color", "#1f2937");
+            },
+            function () {
+                $(this).css("background-color", "#10b981");
+            }
+        );
+    } else {
+        $(".container").animate(
+            {
+                backgroundColor: "#1f2937",
+            },
+            300
+        );
+        $("#heading1").animate(
+            {
+                color: "#fff",
+            },
+            300
+        );
+        $("hr").animate(
+            {
+                border: "1px solid #2f3e53",
+            },
+            300
+        );
+        $("label").animate(
+            {
+                color: "#eee",
+            },
+            300
+        );
+        $(".theme").fadeOut(100, function () {
+            $(".theme").attr("src", "images/light.png");
+            $(".theme").fadeIn(100);
+        });
+    }
+});
