@@ -17,7 +17,9 @@ $("button").click(function () {
     password1 = generatePassword(array);
     password2 = generatePassword(array);
     $("#first-password").text(password1);
+    $("#first-password").append("<img src='images/copy.png' />");
     $("#second-password").text(password2);
+    $("#second-password").append("<img src='images/copy.png' />");
 });
 
 function check(includeNumbers, includeSymbols) {
@@ -41,3 +43,11 @@ function generatePassword(array) {
     }
     return password;
 }
+
+let text = "";
+
+$(".password").click(function () {
+    text = $(this).text();
+    navigator.clipboard.writeText(text);
+    $("#tooltip").text("Copied!");
+});
