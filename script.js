@@ -53,7 +53,6 @@ $(".password").click(function () {
 });
 
 $(".tooltip").tooltipster({
-    theme: "my-custom-theme",
     trigger: "click",
     timer: 1000,
 });
